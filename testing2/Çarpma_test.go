@@ -11,7 +11,7 @@ func TestÇarpma(t *testing.T) {
 	assert := assert.New(t)
 
 	// Test için kullanılacak örnek giriş verisi
-	sayilar := []int{1, 2, 3, 4, 5, 6}
+	sayilar := []int{2, 3, 4, 5, 6, 7, 8, 9}
 
 	// Çarpma fonksiyonunu çağırıyoruz
 	çarpım, err := ÇarpmaFonksiyonu(sayilar)

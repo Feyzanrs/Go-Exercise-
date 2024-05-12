@@ -8,15 +8,13 @@ func main() {
 	var num1, num2 float64
 
 	fmt.Print("Enter the first number: ")
-	_, err := fmt.Scanf("%f", &num1)
-	if err != nil {
+	if _, err := fmt.Scan(&num1); err != nil {
 		fmt.Println("Error reading the first number:", err)
 		return
 	}
 
 	fmt.Print("Enter the second number: ")
-	_, err = fmt.Scanf("%f", &num2)
-	if err != nil {
+	if _, err := fmt.Scan(&num2); err != nil {
 		fmt.Println("Error reading the second number:", err)
 		return
 	}

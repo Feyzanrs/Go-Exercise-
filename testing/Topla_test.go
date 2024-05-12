@@ -11,7 +11,7 @@ func TestTopla(t *testing.T) {
 	assert := assert.New(t)
 
 	// Test için kullanılacak örnek giriş verisi
-	sayilar := []int{1, 2, 3, 4, 5, 6}
+	sayilar := []int{444, 555}
 
 	// Topla fonksiyonunu çağırıyoruz
 	toplam, err := ToplaFonksiyonu(sayilar)

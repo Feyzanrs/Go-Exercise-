@@ -15,7 +15,7 @@ func ÇarpmaFonksiyonu(sayilar []int) (int, error) {
 
 func main() {
 	//Test için kullanılacak örnek giriş verisi
-	sayilar := []int{1, 2, 3, 4, 5, 6}
+	sayilar := []int{2, 3, 4, 5, 6, 7, 8, 9}
 
 	//ÇarpmaFonksiyonu fonksiyonunu çağıırıyoruz
 	çarpim, err := ÇarpmaFonksiyonu(sayilar)
