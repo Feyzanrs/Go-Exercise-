@@ -13,11 +13,10 @@ type DeskTimeData struct {
 }
 
 func main() {
-	apiKey := "ca6c72efeafd79aca81022a6f00ada05" // Your API key
-	userID := "608497"                           // Your user ID
+	apiKey := "YOUR_API_KEY" // Your API key
 
-	// Construct the URL without date parameters
-	url := fmt.Sprintf("https://desktime.com/api/v2/json/employee?apiKey=%s&id=%s", apiKey, userID)
+	// Construct the URL
+	url := fmt.Sprintf("https://desktime.com/api/v2/json/company?apiKey=%s", apiKey)
 
 	// Create an HTTP client with a timeout
 	client := &http.Client{Timeout: 10 * time.Second}
@@ -30,7 +29,7 @@ func main() {
 	}
 	defer resp.Body.Close()
 
-	// Read the response body using io.ReadAll
+	// Read the response body using io.ReadAll instead of ioutil.ReadAll
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Printf("Error reading response: %s\n", err)

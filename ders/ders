@@ -1,0 +1,164 @@
+1) htmlspecialchars(script-tags$_POST[`urunadı`]) ifadesi ne işe yarar?
+$_POST[`urunadı`] değişkenindeki HTML etiketini kaldırır.
+
+2) "admin/xxxx/detay.php" sayfası hangi işlem için kullanılır?
+Tek bir kaydı okuma ve listeleme 
+
+3) "extract($kayıt)" ifadesi ne işe yarar?
+Her bir alanı ayrı bir değişken haline getirir
+
+4) Aşağıdaki kavramlardan hangisinin işlevi yanlış verilmiştir?
+Datetime= Tarih ve zaman değerlerini (yyyymmddhhmmss) şeklinde saklar
+
+5) PDO CRUD uygulamasını oluşturan uygulamalardan hangisinin işlevi yanlış verilmiştir?
+admin/header.php= web sayfalarının alt bilgilerini içeren sayfa 
+
+6) Aşağıda verilen kavramlardan hangisi CRUD uygulamalarının temel işlevlerinden sayılmaz?
+SOLVE
+
+7) Sayfa parametresi aktif sayfa numarasını gösteren parametre boşsa değeri 1 olarak gösteren kod aşağıdakilerden hangisidir?
+$sayfa=isset($_GET[`sayfa`])?$_GET[`sayfa`]:1;
+
+8)"ürünler"tablosuna"resimler" adında bir sütun ekleyen sql kodu aşağıdakilerden hangisidir?
+ALTER TABLE `urunler` ADD `resimler` VARCHAR(128);
+
+9) Aşağıdaki PHP koduyla ilgili hangisi doğrudur?
+Bu kod bir SQL sorgusunu hazırlar ve çalıştırır.
+
+10)Aşağıdaki php koduyla ilgili olarak aşağıdaki ifadelerden hangisi doğrudur?
+$sorgu="SELECT COUNT(*) as kayit_sayisi FROM urunler WHERE  urun_adi LIKE :aranan ";
+Bu kod `urunler` tablosundaki `urunadı` sütununda belirtilen desene benzer ürünlerin sayısını bulmak için bir SQL sorgusu oluşturur.
+
+11)Aşağıdaki PHP koduyla ilgili olarak aşağıdaki ifadelerden hangisi doğrudur?
+$kayıt=$stmt->fetch(PDO::FETCH_ASSOC);
+Bu kod, PDOStatement sınıfından bir nesnenin fetch methodunu kullanarak bir SQL sorgusunun sonucunda dönen verileri alır ve bu verileri ilişkisel bir dizi olarak $kayıt değişkenine atar
+
+12)
+"Merhaba, Ahmet!"
+
+13)
+1 ile 10 arasındaki çift sayıları ekrana yazdırır 
+
+14)
+
+15) Aşağıdaki PHP kod parçası neyi kontrol eder ve sonuç olarak ne yapar?
+// kayda ait resim varsa sunucudan sil 
+if (!empty($resim)){
+}
+Eğer $resim değişkeni boş değilse ve sunucuda belirtilen dizinde dosya mevcutsa dosyayı siler.
+
+16) Oluşturduğumuz projeyi aşağıdaki dosyalardan hangisinin içerrisinde kullanıyoruz ?
+htdocs 
+
+17)"admin/xxxx/liste.php" dosyası ne işe yarar?
+MySQL veritabanındaki kayıtları siler 
+
+18)VARCHAR() veri tipinin maksimum karakter genişliği ne kadardır?
+VARCHAR=255 KARAKTER
+
+19) TEXT veri tipinin maksimum karakter sınırı nedir?
+TEXT=65535 KARAKTER
+
+20)Aşağıdaki JavaScript kodu ne işe yarar?
+Kullanıcı kayıt silme işlemini onaylatır ve ilgili kaydı silmek için yönlendirme yapar.
+
+22)PDO CRUD uygulaması aşağıdaki dosyalardan hangilerinden oluşur ?
+index.php, database.php, functions.php 
+
+23) Bir veritabanındaki belirli bir tablodaki toplam kayıt sayısını bulmak istiyorsunuz 
+Hangisi bu amaç için en uygun SQL sorgusudur ?
+SELECT COUNT(*) FROM tablo_adi;
+
+24)Veritabanı oluşturmak için MYSQL servisinin sağındaki Admin butonuna tıklayarak veya tarayıcınızın adres satırına hangisini yazarak phpMyAdmin veritabanı yönetim paneli açılır 
+http://localhost/phpmyadmin/
+
+25) Tarayıcınızın adres satırına ne yazarsak ürün liste sayfasını görürüz?
+http://localhost/proje/admin/urun/liste.php
+
+26) Web sayfalarının arayüzünü tasarlarken hangi hangi kütüphanesinden faydalanırız?
+Bootstrap 
+
+27)$count değişkenine 1 eklemenin doğru yolu nedir?
+.$count++; D
+
+28)PHP de kaç farklı döngü vardır?
+3 B
+
+29) Aşağıdakilerden hangisi bir web sunucu programıdır?
+Apache A 
+
+30) CRUD uygulaması nedir 
+create,read,update,delete A 
+
+31) Veritabanında `ürünler` adlı tablodaki kayıt sayısını bulmayı sağlayan ve `kayıt_sayısı`adı altında döndüren SQL kodu hangisidir ?
+SELECT COUNT(*)as kayıt_sayısı FROM urunler; E 
+
+32)Hangisi Bootstrap kütüphanesinin dahili olarak sunduğu simge setidir 
+Glyphicons 
+
+33)"php_pdo_projesi" geliştirilirken, çoklu silme işlemi için kullanıcıya gösterilecek uyarı mesajlarını daha estetik bir arayüze kavuşturmak için hangi eklenti tercih edildi?
+SweetAlert
+
+34)Web sayfalarının alt bilgilerini içeren sayfa dosyası hangisidir?
+admin/footer.php
+
+35) Primary key birincil Anahtar anlamına gelir her tabloda olması gereken bir özelliktir ve seçili olduğu alana mutlaka veri girşi olmalıdır.
+YANLIŞ
+
+36)Admin/xxxx/liste.php , liste sayfasındaki kayıtları sayfa sayfa görüntülemek için kullanılır 
+YANLIŞ 
+
+37)SQL komut sisteminde kullanılan "Select isim email FROM uyeler" ; komutunun görevi nedir?
+Uyeler tablosundaki isim ve email bilgilerini listeler D
+
+38)<from> etiketinin üç önemli özelliği nedir ?
+name,action,method B 
+
+39)Mysql_connect(ABC, kullanıcı_adi,sifre)
+Sunucu adı 
+
+40)Aşağıdakilerden hangisi veritabanı ismi olabilir ?
+Okul_Bilgileri B 
+
+42) Formlardan gelen bilgi güvenliği için aşağıdakilerden hangisi kullanılmaz?
+copy A 
+
+43) Php ile çalışırken hangi veritabanı ile çalışmak performansı arttıracaktır 
+MySql A 
+
+44)PHP ile MySql veritabanına erişmek için hangi işlevi kullanırsınız?
+MySql_connect()işlevi C 
+
+45) Php ile Mysql veritabanından veri çekmek için hangi işlevi kullanırsınız ?
+MySQLquery()işlevi 
+
+46)TEXT uzun yazılar için Değişken bir metni en fazla 65535 karakter uzunluğu ile tutar ?
+admin/ekleme.php 
+
+47) ?
+DOĞRU
+
+48) varchar()-en fazla 200 karakter barındırır. 
+	YANLIŞ 255 karakter
+
+49) int()- maksimum karakter genişliği parametre olarak alınır
+DOĞRU 
+
+50) CREATE TABLE IF NOT EXISTS `urunler`SQL sorgusunun işlevi nedir ?
+`urunler`adllı bir tablonun varlığını denetle, tablo yoksa oluştur D 
+
+51) Bootstrap nedir?
+Birçok hazır öge içeren bir frontend kütüphanesi 
+
+52)Katagoriler tablosunu oluşturmak için kullanılan SQL sorgusu hangi panelde çalıştırılmalıdır?
+phpMyAdmin 
+
+53) Aşağıdaki sorgulardan hangisi toplam kayıt sayısını hesaplar?
+$sorgu="SELECT COUNT"(*)as kayit_sayisi FROM urunler
+
+54) Verilerinin okunması için gerekli olan arayüzün tasarlanması ve kodlanması aşamasında SQL kullanılır 
+YANLIŞ 
+
+55) Bir web altyapısını oluşturmak için hangileri kullanılabilir?
+Hepsi D 
+
