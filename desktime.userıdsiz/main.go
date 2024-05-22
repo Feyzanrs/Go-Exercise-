@@ -13,7 +13,7 @@ type DeskTimeData struct {
 }
 
 func main() {
-	apiKey := "YOUR_API_KEY" // Your API key
+	apiKey := "ca6c72efeafd79aca81022a6f00ada05" // Your API key
 
 	// Construct the URL
 	url := fmt.Sprintf("https://desktime.com/api/v2/json/company?apiKey=%s", apiKey)
