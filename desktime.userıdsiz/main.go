@@ -3,46 +3,53 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io"
+	"io/ioutil"
 	"net/http"
-	"time"
 )
 
+// DeskTimeData API'den dönen JSON yapısını modellemek için kullanılır
 type DeskTimeData struct {
-	DesktimeTime int `json:"desktimeTime"`
+	DeskTimeTime int `json:"desktimeTime"`
 }
 
-func main() {
-	apiKey := "ca6c72efeafd79aca81022a6f00ada05" // Your API key
+func fetchDeskTimeData(apiKey string) {
+	// API URL'ini oluşturma
+	url := fmt.Sprintf("https://desktime.com/api/v2/json/employee?apiKey=%s", apiKey)
 
-	// Construct the URL
-	url := fmt.Sprintf("https://desktime.com/api/v2/json/company?apiKey=%s", apiKey)
-
-	// Create an HTTP client with a timeout
-	client := &http.Client{Timeout: 10 * time.Second}
-
-	// Send the GET request
-	resp, err := client.Get(url)
+	// HTTP GET isteği
+	resp, err := http.Get(url)
 	if err != nil {
-		fmt.Printf("Error fetching data: %s\n", err)
+		fmt.Println("HTTP request failed:", err)
 		return
 	}
 	defer resp.Body.Close()
 
-	// Read the response body using io.ReadAll instead of ioutil.ReadAll
-	body, err := io.ReadAll(resp.Body)
+	// Yanıtı okuma
+	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		fmt.Printf("Error reading response: %s\n", err)
+		fmt.Println("Failed to read response body:", err)
 		return
 	}
 
-	// Unmarshal the JSON data
+	// JSON yanıtını parse etme
 	var data DeskTimeData
 	if err := json.Unmarshal(body, &data); err != nil {
-		fmt.Printf("Error decoding JSON: %s\n", err)
+		fmt.Println("Failed to parse JSON response:", err)
 		return
 	}
 
-	// Print the decoded data
-	fmt.Printf("Desktime Time: %d\n", data.DesktimeTime)
+	// DeskTime süresini saat ve dakika olarak hesaplama
+	hours := data.DeskTimeTime / 3600
+	minutes := (data.DeskTimeTime % 3600) / 60
+
+	// DeskTime değerini yazdırma
+	fmt.Printf("DeskTime for the employee: %d hours, %d minutes\n", hours, minutes)
+}
+
+func main() {
+	// API anahtarı
+	apiKey := "ca6c72efeafd79aca81022a6f00ada05"
+
+	// DeskTime verilerini getir
+	fetchDeskTimeData(apiKey)
 }

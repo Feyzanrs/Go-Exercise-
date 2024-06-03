@@ -39,8 +39,6 @@ Bu kod, PDOStatement sınıfından bir nesnenin fetch methodunu kullanarak bir S
 13)
 1 ile 10 arasındaki çift sayıları ekrana yazdırır 
 
-14)
-
 15) Aşağıdaki PHP kod parçası neyi kontrol eder ve sonuç olarak ne yapar?
 // kayda ait resim varsa sunucudan sil 
 if (!empty($resim)){
@@ -75,7 +73,7 @@ http://localhost/phpmyadmin/
 25) Tarayıcınızın adres satırına ne yazarsak ürün liste sayfasını görürüz?
 http://localhost/proje/admin/urun/liste.php
 
-26) Web sayfalarının arayüzünü tasarlarken hangi hangi kütüphanesinden faydalanırız?
+26) Web sayfalarının arayüzünü tasarlarken hangi kütüphanesinden faydalanırız?
 Bootstrap 
 
 27)$count değişkenine 1 eklemenin doğru yolu nedir?
@@ -132,10 +130,10 @@ MySql_connect()işlevi C
 45) Php ile Mysql veritabanından veri çekmek için hangi işlevi kullanırsınız ?
 MySQLquery()işlevi 
 
-46)TEXT uzun yazılar için Değişken bir metni en fazla 65535 karakter uzunluğu ile tutar ?
+46)
 admin/ekleme.php 
 
-47) ?
+47) TEXT uzun yazılar için Değişken bir metni en fazla 65535 karakter uzunluğu ile tutar ?
 DOĞRU
 
 48) varchar()-en fazla 200 karakter barındırır. 
@@ -147,10 +145,10 @@ DOĞRU
 50) CREATE TABLE IF NOT EXISTS `urunler`SQL sorgusunun işlevi nedir ?
 `urunler`adllı bir tablonun varlığını denetle, tablo yoksa oluştur D 
 
-51) Bootstrap nedir?
+51) Bootstrap nedir? +
 Birçok hazır öge içeren bir frontend kütüphanesi 
 
-52)Katagoriler tablosunu oluşturmak için kullanılan SQL sorgusu hangi panelde çalıştırılmalıdır?
+52)Katagoriler tablosunu oluşturmak için kullanılan SQL sorgusu hangi panelde çalıştırılmalıdır? +
 phpMyAdmin 
 
 53) Aşağıdaki sorgulardan hangisi toplam kayıt sayısını hesaplar?
@@ -158,7 +156,7 @@ $sorgu="SELECT COUNT"(*)as kayit_sayisi FROM urunler
 
 54) Verilerinin okunması için gerekli olan arayüzün tasarlanması ve kodlanması aşamasında SQL kullanılır 
 YANLIŞ 
-
+   
 55) Bir web altyapısını oluşturmak için hangileri kullanılabilir?
 Hepsi D 
 
