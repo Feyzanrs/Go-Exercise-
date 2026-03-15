@@ -18,7 +18,7 @@ func validate(input int) error {
 }
 
 func main() {
-	input := 
+	input := 81
 	if err := validate(input); err != nil {
 		fmt.Println(err)
 	} else if input%2 == 0 {
